@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "prod:serve": "node dist/index.js",
-    "start": "npm run build && npm run prod:serve",
+    "start": "yarn build && yarn prod:serve",
     "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/index.ts"
   },
   "dependencies": {
