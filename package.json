@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
+    "prod:serve": "node dist/index.js",
+    "start": "npm run build && npm run prod:serve",
     "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/index.ts"
   },
   "dependencies": {
