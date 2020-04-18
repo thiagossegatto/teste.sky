@@ -1,11 +1,14 @@
 import mongoose from "mongoose";
+import "dotenv/config";
 
-mongoose.connect("mongodb+srv://skyTest:skyTest@cluster0-umqet.mongodb.net/test?retryWrites=true&w=majority", {
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useNewUrlParser: true,
-});
+// if (process.env.MONGO_URI) {
+  console.log(process.env.MONGO_URI);
+  mongoose.connect(process.env.MONGO_URI, {
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useNewUrlParser: true,
+  });
 
-mongoose.Promise = global.Promise;
-
+  mongoose.Promise = global.Promise;
+// }
 export default mongoose;
